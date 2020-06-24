@@ -247,7 +247,7 @@ window.onload = function() {
 
 
 
-  displayIntro();
+  // displayIntro();
 
 
 }
