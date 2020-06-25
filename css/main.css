@@ -367,6 +367,7 @@ textarea {
     padding: 0.2em 0;
 }
 
+
 /* End CSS Reset */
 
 
@@ -402,22 +403,15 @@ textarea {
   box-sizing: border-box;
 }
 
-
 body {
   font-family: 'Open Sans', sans-serif;
   font-size: 14px;
   font-weight: 400;
   height: 100vh;
   color: white;
-  background-image: linear-gradient(rgba(3, 177, 252, .1), rgba(3, 248, 252, .1), rgba(3, 177, 252, .5)),
-  url("../img/backgroundCode.png");
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
   margin: 0;
-  padding-top: 20px;
+  padding-top: 120px;
 }
-
-
 
 header {
   margin: 0;
@@ -434,7 +428,6 @@ header {
   margin: 0;
   height: 40px;
   width: 100%;
-  overflow: hidden;
   position: absolute;
   top: 0px;
 }
@@ -443,8 +436,6 @@ header {
   display: inline-block;
 
 }
-
-
 
 .icon {
   margin: 5px 0 0 5px;
@@ -509,25 +500,27 @@ header {
 .headlineDiv {
   width: 90%;
   margin: 0 auto;
-  animation: bounce 2s linear forwards;
   text-align: center;
+
 }
 
 
 .headline1, .headlineLastName {
   letter-spacing: 7px;
-  box-shadow: 2px 2px 6px 6px white;
   background-color: black;
   padding: 5px 0;
 }
 
 .headline1 {
+  top: 45px;
   font-weight: 400;
   font-size: 20px;
   text-shadow: 1px 1px black;
+  box-shadow: 1px 1px 5px 5px white;
   background-color: black;
-  animation: bounce 2s linear forwards;
   border-radius: 3px;
+  animation: bounce 2s linear forwards;
+
 }
 
 .headline1LastTitle {
@@ -536,16 +529,17 @@ header {
 }
 
 @keyframes bounce {
+  0% {
+    transform: translateY(45px);
+  }
   50% {
-    transform: translateY(55px);
+    transform: translateY(105px);
   }
   100% {
-    transform: translateY(25px);
+    transform: translateY(45px);
     box-shadow: none;
   }
 }
-
-
 
 .intro {
   box-shadow: 0px 0px 6px 6px lightblue;
@@ -558,7 +552,6 @@ header {
 }
 
 .navDiv {
-
   width: 100%;
   background: black;
   border: 1px 1px white;
@@ -566,14 +559,13 @@ header {
 
 ul {
     text-align: center;
-    margin: 10px 0;
+    margin-top: 55px;
     padding-bottom: 10px;
-
 }
 
 ul li {
+  height: 20px;
   display: inline-block;
-  margin-top: 55px;
   padding-right: 5px;
 }
 
@@ -582,26 +574,35 @@ a {
 }
 
 .videoDiv {
+  position: absolute;
+  top: 116px;
   width: 100%;
   height: 240px;
   text-align: center;
   box-shadow: 1px 1px 5px 5px lightblue;
-  background-color: rgba(0, 0, 0, .8);
+  background-color: rgba(0, 0, 0, 1);
+  animation: pull 2s linear forwards;
+  transform: perspective(100px) translateZ(2000px);
 }
 
-.video {
 
+
+img {
+  height: 620px;
+  width: 350px;
+}
+
+.background {
+  height: 600px;
+  width: 100%;
+  background-image: linear-gradient(rgba(3, 177, 252, .1), rgba(3, 248, 252, .1), rgba(3, 177, 252, .5));
+  /* url("../img/backgroundCode.png"); */ */
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .wrapper {
-  margin: 120px 5% 0 5%;
-  height: 45%;
-  /* background-image:
-    url('../img/shield.png');
-  background-repeat: no-repeat;
-  background-size: 100% 80%; */
-  animation: pull 2s linear forwards;
-  transform: perspective(10px) translateZ(2000px);
+  /* height: 45%; */
 }
 
 @keyframes pull {

@@ -6,17 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
-
     <title>Matthew Miles Portfolio</title>
-    <!-- <style>
-      backgroundImage ="linear-gradient(rgba(3, 177, 252, .1), rgba(3, 248, 252, .1), rgba(3, 177, 252, .5)),
-      url("../img/backgroundCode.png");
-      background-repeat: no-repeat;
-      background-size: 100% 100%;
-    </style> -->
 </head>
-<body id="body">
 
+<body class="background" id="body">
+  <img src="img/backgroundCode.png" height="200px" width="200px" z-index='-1'>
   <header class="header" id="header">
     <div class="topNav">
         <div class="imageContainer"><a href="#body"><button class="icon menuButton" title="Click for Menu" onclick="displayMenu()"></button></a></div>
@@ -54,21 +48,22 @@
   </header>
 
 
+  <div>
+    <div class="wrapper" id="wrapper">
+      <!-- keeping this for an example template to follow -->
+        <div class="videoDiv">
+          <video class="video" id="video" width="300" height="240" autoplay muted>
+            <source src="video/travelThruData.mp4" type="video/mp4">
+              <source src="movie.ogg" type="video/ogg">
+                Your browser does not support the video tag.
+          </video>
+        </div>
 
-  <div class="wrapper" id="wrapper">
-    <!-- keeping this for an example template to follow -->
-      <div class="videoDiv">
-        <video class="video" id="video" width="300" height="240" autoplay muted>
-          <source src="video/travelThruData.mp4" type="video/mp4">
-            <source src="movie.ogg" type="video/ogg">
-              Your browser does not support the video tag.
-        </video>
+      <div id="slide">
+
       </div>
-
-    <div id="slide">
-
-    </div>
-  </div> <!-- end wrapper div -->
+    </div> <!-- end wrapper div -->
+  </div>
 
   <footer>
   </footer>
