@@ -409,7 +409,8 @@ body {
   font-weight: 400;
   height: 100vh;
   color: white;
-  background-color: lightblue;
+  background-image: linear-gradient(rgba(3, 177, 252, .1), rgba(3, 248, 252, .1), rgba(3, 177, 252, .5)),
+  url("../img/backgroundCode.png");
   background-repeat: no-repeat;
   background-size: 100% 100%;
   margin: 0;
@@ -440,7 +441,7 @@ header {
 
 .imageContainer {
   display: inline-block;
-  margin: 5px 10px;
+
 }
 
 
@@ -457,7 +458,7 @@ header {
   background-size: cover;
   background-repeat: no-repeat;
   background-color: transparent;
-  margin: 0;
+  margin-left: 10px;
 }
 
 .homeButton {
@@ -466,7 +467,8 @@ header {
   background-repeat: no-repeat;
   background-color: transparent;
   display: inline-block;
-  margin: 0;
+  margin-left: 5px;
+  margin-right: 10px;
 }
 
 .introMatthew {
@@ -477,7 +479,8 @@ header {
   width: 190px;
   height: 25px;
   position: absolute;
-  top: 7px;
+  top: 6px;
+  margin-left: 7px;
   letter-spacing: 5px;
   transform: perspective(500px) translateZ(-1500px);
   animation: introMatthew 2s linear forwards;
@@ -497,7 +500,7 @@ header {
   display: inline-block;
   border-radius: 20%;
   position: absolute;
-  right: 15px;
+  right: 10px;
   top: 5px;
   background-size: 100% 100%;
   margin: 0;
@@ -508,7 +511,6 @@ header {
   margin: 0 auto;
   animation: bounce 2s linear forwards;
   text-align: center;
-
 }
 
 
@@ -517,7 +519,6 @@ header {
   box-shadow: 2px 2px 6px 6px white;
   background-color: black;
   padding: 5px 0;
-  border-radius: 100px;
 }
 
 .headline1 {
@@ -526,10 +527,11 @@ header {
   text-shadow: 1px 1px black;
   background-color: black;
   animation: bounce 2s linear forwards;
+  border-radius: 3px;
 }
 
 .headline1LastTitle {
-  color: lightblue;
+  color: rgb(3, 177, 252);
   margin-left: 10px;
 }
 
@@ -545,23 +547,61 @@ header {
 
 
 
-
-
-.headline1LastName {
-  color: lightblue;
-  margin-left: 10px;
+.intro {
+  box-shadow: 0px 0px 6px 6px lightblue;
+  padding-left: 4px;
 }
 
+.headline1LastName {
+  color: rgb(3, 177, 252);
+  margin-left: 0px;
+}
+
+.navDiv {
+
+  width: 100%;
+  background: black;
+  border: 1px 1px white;
+}
+
+ul {
+    text-align: center;
+    margin: 10px 0;
+    padding-bottom: 10px;
+
+}
+
+ul li {
+  display: inline-block;
+  margin-top: 55px;
+  padding-right: 5px;
+}
+
+a {
+  font-size: 12px;
+}
+
+.videoDiv {
+  width: 100%;
+  height: 240px;
+  text-align: center;
+  box-shadow: 1px 1px 5px 5px lightblue;
+  background-color: rgba(0, 0, 0, .8);
+}
+
+.video {
+
+}
 
 .wrapper {
-  margin-top: 120px;
-  height: 480px;
-  background-image:
+  margin: 120px 5% 0 5%;
+  height: 45%;
+  /* background-image:
     url('../img/shield.png');
   background-repeat: no-repeat;
-  background-size: 100% 85%;
+  background-size: 100% 80%; */
   animation: pull 2s linear forwards;
-  transform: perspective(1000px) translateZ(2000px);
+  transform: perspective(10px) translateZ(2000px);
 }
 
 @keyframes pull {
@@ -632,3 +672,7 @@ footer {
   height: 44px;
   background-color: black;
 }
+
+
+
+/* media queries for smart phones */

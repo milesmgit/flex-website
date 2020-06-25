@@ -242,11 +242,6 @@ window.onload = function() {
   }
 
 
-
-
-
-
-
   // displayIntro();
 
 
