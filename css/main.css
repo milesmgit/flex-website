@@ -413,6 +413,21 @@ body {
   color: white;
   margin: 0;
   padding-top: 88px;
+
+}
+
+.background {
+  height: 508px;
+  width: 100%;
+  animation: rotate 2.1s linear forwards;
+}
+
+
+@keyframes rotate {
+  100% {
+    transform: rotateX(360deg);
+  }
+
 }
 
 header {
@@ -474,10 +489,10 @@ header {
   height: 25px;
   position: absolute;
   top: 6px;
-  margin-left: 7px;
+  margin-left: 12px;
   letter-spacing: 5px;
   transform: perspective(500px) translateZ(-1500px);
-  animation: introMatthew 2s linear forwards;
+  animation: introMatthew 5s linear forwards;
 }
 
 @keyframes introMatthew {
@@ -548,7 +563,7 @@ header {
 }
 
 .intro {
-  box-shadow: 0px 0px 6px 6px lightblue;
+  box-shadow: 0px 0px 4px 4px lightblue;
   padding-left: 4px;
 }
 
@@ -566,6 +581,7 @@ header {
 /* going to be the side bar menu */
 /* slide animation pulled from https://stackoverflow.com/questions/16989585/css-3-slide-in-from-left-transition */
 .menuSlide {
+  display: none;
   width: 50%;
   height: 300px;
   position: absolute;
@@ -606,27 +622,31 @@ a {
 }
 
 
-img {
+.img {
+  position: absolute;
   height: 508px;
   width: 100%;
-}
-
-.background {
-  height: 508px;
-  width: 100%;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.wrapper {
-  /* height: 45%; */
+  transform: perspective(500px) translateZ(-1500px);
+  animation: pull 2.2s linear forwards;
 }
 
 @keyframes pull {
+
   100% {
-    transform: translateZ(0);
+    transform: translateZ(0px);
+    height: 500px;
   }
 }
+
+.wrapper {
+  position: absolute;
+  top: 0px;
+  background-image: linear-gradient(rgba(3, 177, 252, .1), rgba(64, 130, 237, .1), rgba(3, 177, 252, .8));
+  height: 600px;
+  width: 100%;
+}
+
+
 
 
 /* slide animation pulled from https://stackoverflow.com/questions/16989585/css-3-slide-in-from-left-transition */
@@ -682,7 +702,7 @@ img {
 footer {
   position: fixed;
   left: 0;
-  bottom: 0;
+  bottom: -126px;
   width: 100%;
   height: 44px;
   background-color: black;
@@ -746,6 +766,7 @@ footer {
 
 /* background-image: linear-gradient(rgba(3, 177, 252, .1), rgba(3, 248, 252, .1), rgba(3, 177, 252, .5)); */
 /* url("../img/backgroundCode.png"); */
-
+/* background-repeat: no-repeat;
+   background-size: cover; */
 
 /* ********************************************************************************************************************************************** */
