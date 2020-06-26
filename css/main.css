@@ -407,10 +407,12 @@ body {
   font-family: 'Open Sans', sans-serif;
   font-size: 14px;
   font-weight: 400;
-  height: 100vh;
+  /* 640 galaxy s5 height - 88 header - 44 footer = 508 working height */
+  height: 508px;
+  width: 100%;
   color: white;
   margin: 0;
-  padding-top: 120px;
+  padding-top: 88px;
 }
 
 header {
@@ -422,6 +424,7 @@ header {
   top: 0;
   left: 0;
   background-color: black;
+  border-bottom: 2px solid white;
 }
 
 .topNav {
@@ -498,12 +501,13 @@ header {
 }
 
 .headlineDiv {
+  position: relative;
+  top: 45px;
   width: 90%;
   margin: 0 auto;
-  text-align: center;
+  animation: slide 3s linear forwards;
 
 }
-
 
 .headline1, .headlineLastName {
   letter-spacing: 7px;
@@ -512,33 +516,35 @@ header {
 }
 
 .headline1 {
-  top: 45px;
+  position: relative;
+  margin: 0 20px;
+  top: 0;
   font-weight: 400;
   font-size: 20px;
   text-shadow: 1px 1px black;
   box-shadow: 1px 1px 5px 5px white;
   background-color: black;
   border-radius: 3px;
-  animation: bounce 2s linear forwards;
-
-}
-
-.headline1LastTitle {
-  color: rgb(3, 177, 252);
-  margin-left: 10px;
+  animation: bounce 3s linear forwards;
 }
 
 @keyframes bounce {
   0% {
-    transform: translateY(45px);
+    transform: translateY(0px);
   }
   50% {
-    transform: translateY(105px);
+    transform: translateY(350px);
   }
   100% {
-    transform: translateY(45px);
+    transform: translateY(0px);
     box-shadow: none;
   }
+}
+
+
+.headline1LastTitle {
+  color: rgb(3, 177, 252);
+  margin-left: 10px;
 }
 
 .intro {
@@ -557,46 +563,57 @@ header {
   border: 1px 1px white;
 }
 
+/* going to be the side bar menu */
+/* slide animation pulled from https://stackoverflow.com/questions/16989585/css-3-slide-in-from-left-transition */
+.menuSlide {
+  width: 50%;
+  height: 300px;
+  position: absolute;
+  background: gray;
+  top: -55px;
+  left: -120px;
+  padding-left: 20px;
+  -webkit-animation: slide .5s forwards;
+  animation: menuSlide .5s forwards;
+  text-align: left;
+  z-index: 200;
+}
+
+@-webkit-keyframes menuSlide {
+    100% { left: 0; }
+}
+
+@keyframes slide {
+    100% {
+      left: 0;
+    }
+}
+
 ul {
-    text-align: center;
     margin-top: 55px;
-    padding-bottom: 10px;
+
 }
 
 ul li {
   height: 20px;
-  display: inline-block;
-  padding-right: 5px;
+  padding: 25px 0 10px 0;
+
 }
 
 a {
-  font-size: 12px;
+  color: white;
+  font-size: 14px;
 }
-
-.videoDiv {
-  position: absolute;
-  top: 116px;
-  width: 100%;
-  height: 240px;
-  text-align: center;
-  box-shadow: 1px 1px 5px 5px lightblue;
-  background-color: rgba(0, 0, 0, 1);
-  animation: pull 2s linear forwards;
-  transform: perspective(100px) translateZ(2000px);
-}
-
 
 
 img {
-  height: 620px;
-  width: 350px;
+  height: 508px;
+  width: 100%;
 }
 
 .background {
-  height: 600px;
+  height: 508px;
   width: 100%;
-  background-image: linear-gradient(rgba(3, 177, 252, .1), rgba(3, 248, 252, .1), rgba(3, 177, 252, .5));
-  /* url("../img/backgroundCode.png"); */ */
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -613,10 +630,9 @@ img {
 
 
 /* slide animation pulled from https://stackoverflow.com/questions/16989585/css-3-slide-in-from-left-transition */
-#slide {
+.slide {
   width: 100%;
   position: absolute;
-  top: 100px;
   left: -2800px;
   -webkit-animation: slide 1.5s forwards;
   -webkit-animation-delay: 1s;
@@ -629,12 +645,10 @@ img {
 }
 
 @keyframes slide {
-    100% { left: 0; }
+    100% {
+      left: 0;
+    }
 }
-
-
-
-
 
 #slideBack {
   width: 100%;
@@ -677,3 +691,61 @@ footer {
 
 
 /* media queries for smart phones */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* keeping these bits for examples */
+
+
+/* .videoDiv {
+  position: absolute;
+  top: 116px;
+  width: 100%;
+  height: 240px;
+  text-align: center;
+  box-shadow: 1px 1px 5px 5px lightblue;
+  background-color: rgba(0, 0, 0, 1);
+  animation: pull 2s linear forwards;
+  transform: perspective(100px) translateZ(2000px);
+} */
+
+/* ************************************************************************************************************************************************ */
+
+/* background-image: linear-gradient(rgba(3, 177, 252, .1), rgba(3, 248, 252, .1), rgba(3, 177, 252, .5)); */
+/* url("../img/backgroundCode.png"); */
+
+
+/* ********************************************************************************************************************************************** */
